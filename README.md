@@ -112,8 +112,7 @@ Scan completion summary showing the elapsed duration and a fully populated resul
 
 ---
 
-═══════════════════════════════
-COMMANDS & CODE
+═══════════════════════════════ COMMANDS & CODE
 ═══════════════════════════════
 
 **Install dependencies:**
