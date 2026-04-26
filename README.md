@@ -38,7 +38,7 @@ OBJECTIVES
 ---
 
 ═══════════════════════════════
-TOOLS & TECHNOLOGIES
+TECHNOLOGIES
 ═══════════════════════════════
 
 ## Tools & Technologies
