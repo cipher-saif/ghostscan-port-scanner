@@ -31,9 +31,9 @@ OBJECTIVES
 - Export discovered results as a plain-text report for further analysis
 
 ---
-═════════════════════
+═════════════════════════════
 TOOLS & TECHNOLOGIES
-═════════════════════
+═════════════════════════════
 
 <p align="left">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B" height="35" />
