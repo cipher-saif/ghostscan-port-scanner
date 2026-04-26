@@ -9,7 +9,7 @@
 ```
 
 <h1 align="center">PORT SCANNER</h1>
-<p align="center">A multithreaded network port scanner with a real-time hacker-aesthetic terminal UI</p>
+<p align="center">A multithreaded TCP port scanner for network reconnaissance — real-time service detection, banner grabbing, and open port discovery.</p>
 
 ---
 
