@@ -1,4 +1,3 @@
-
 ```
 ██████╗  ██████╗ ██████╗ ████████╗    ███████╗ ██████╗ █████╗ ███╗   ██╗███╗   ██╗███████╗██████╗
 ██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝    ██╔════╝██╔════╝██╔══██╗████╗  ██║████╗  ██║██╔════╝██╔══██╗
@@ -9,7 +8,7 @@
 ```
 
 <h1 align="center">PORT SCANNER</h1>
-<p align="center">A multithreaded TCP port scanner for network reconnaissance — real-time service detection, banner grabbing, and open port discovery.</p>
+<p align="center"><i>𝘈 𝘮𝘶𝘭𝘵𝘪𝘵𝘩𝘳𝘦𝘢𝘥𝘦𝘥 𝘯𝘦𝘵𝘸𝘰𝘳𝘬 𝘱𝘰𝘳𝘵 𝘴𝘤𝘢𝘯𝘯𝘦𝘳 𝘸𝘪𝘵𝘩 𝘢 𝘳𝘦𝘢𝘭-𝘵𝘪𝘮𝘦 𝘩𝘢𝘤𝘬𝘦𝘳-𝘢𝘦𝘴𝘵𝘩𝘦𝘵𝘪𝘤 𝘵𝘦𝘳𝘮𝘪𝘯𝘢𝘭 𝘜𝘐</i></p>
 
 ---
 
@@ -17,17 +16,13 @@
 OVERVIEW
 ═══════════════════════════════
 
-## Overview
-
-Port Scanner is a Python-based network reconnaissance tool built with Streamlit. It allows users to scan a target host for open TCP ports across a configurable range, with real-time feedback, multithreaded execution, and service banner grabbing. The interface adopts a dark terminal aesthetic designed for clarity and focus during active scans.
+𝙋𝙤𝙧𝙩 𝙎𝙘𝙖𝙣𝙣𝙚𝙧 is a Python-based network reconnaissance tool built with Streamlit. It allows users to scan a target host for open TCP ports across a configurable range, with real-time feedback, multithreaded execution, and service banner grabbing. The interface adopts a dark terminal aesthetic designed for clarity and focus during active scans.
 
 ---
 
 ═══════════════════════════════
 OBJECTIVES
 ═══════════════════════════════
-
-## Objectives
 
 - Provide a fast, multithreaded port scanning engine capable of covering the full 65535 port range
 - Display live scan progress and open port results in real time within the browser UI
@@ -38,23 +33,22 @@ OBJECTIVES
 ---
 
 ═══════════════════════════════
-TECHNOLOGIES
+TOOLS & TECHNOLOGIES
 ═══════════════════════════════
 
-## Tools & Technologies
-
-![Python](https://img.shields.io/badge/Python-3.x-black?style=flat&logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-UI-black?style=flat&logo=streamlit&logoColor=white)
-![Socket](https://img.shields.io/badge/Socket-Networking-black?style=flat)
-![Threading](https://img.shields.io/badge/Threading-Concurrency-black?style=flat)
+<p align="left">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B" height="35" />
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" height="35" />
+  <img src="https://img.shields.io/badge/Socket-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" height="35" />
+  <img src="https://img.shields.io/badge/Threading-6929C4?style=for-the-badge&logo=processwire&logoColor=white" height="35" />
+  <img src="https://img.shields.io/badge/TCP%2FIP-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" height="35" />
+</p>
 
 ---
 
 ═══════════════════════════════
 PROJECT STRUCTURE
 ═══════════════════════════════
-
-## Project Structure
 
 ```
 Port_Scanner/
@@ -72,21 +66,19 @@ Port_Scanner/
 METHODOLOGY
 ═══════════════════════════════
 
-## Methodology
-
-### Target Resolution
+### ◈ 𝚃𝚊𝚛𝚐𝚎𝚝 𝚁𝚎𝚜𝚘𝚕𝚞𝚝𝚒𝚘𝚗
 
 The tool accepts either an IP address or a domain name as the scan target. It resolves the hostname to an IP using Python's `socket.gethostbyname()` before initiating any connection attempts, ensuring compatibility with both formats.
 
-### Multithreaded Scanning Engine
+### ◈ 𝙼𝚞𝚕𝚝𝚒𝚝𝚑𝚛𝚎𝚊𝚍𝚎𝚍 𝚂𝚌𝚊𝚗𝚗𝚒𝚗𝚐 𝙴𝚗𝚐𝚒𝚗𝚎
 
 Ports are distributed across worker threads via a shared thread-safe queue. Each thread independently attempts a TCP connection to its assigned port using `socket.connect_ex()`. A configurable timeout and thread count allow the user to balance scan speed against network stability. A shared lock ensures safe concurrent updates to the result list and progress counter.
 
-### Service Identification & Banner Grabbing
+### ◈ 𝚂𝚎𝚛𝚟𝚒𝚌𝚎 𝙸𝚍𝚎𝚗𝚝𝚒𝚏𝚒𝚌𝚊𝚝𝚒𝚘𝚗 & 𝙱𝚊𝚗𝚗𝚎𝚛 𝙶𝚛𝚊𝚋𝚋𝚒𝚗𝚐
 
 After a successful connection, the scanner cross-references the port number against a dictionary of well-known services (FTP, SSH, HTTP, MySQL, etc.). It then attempts to receive a banner from the open socket, which may reveal server software and version information.
 
-### Real-Time UI Feedback
+### ◈ 𝚁𝚎𝚊𝚕-𝚃𝚒𝚖𝚎 𝚄𝙸 𝙵𝚎𝚎𝚍𝚋𝚊𝚌𝚔
 
 A live progress bar and scrolling result feed update continuously while threads are running. Once all threads complete, the final result set is written to the Results tab and made available for download.
 
@@ -96,9 +88,7 @@ A live progress bar and scrolling result feed update continuously while threads 
 RESULTS & SCREENSHOTS
 ═══════════════════════════════
 
-## Results & Screenshots
-
-### Scanner Interface
+### 𝚂𝚌𝚊𝚗𝚗𝚎𝚛 𝙸𝚗𝚝𝚎𝚛𝚏𝚊𝚌𝚎
 
 ![scanner](Screenshots/scanner.png)
 
@@ -106,7 +96,7 @@ The main scan interface showing target input, scan type selection, timeout slide
 
 ---
 
-### Scan Results
+### 𝚂𝚌𝚊𝚗 𝚁𝚎𝚜𝚞𝚕𝚝𝚜
 
 ![scan_results](Screenshots/scan_results.png)
 
@@ -114,7 +104,7 @@ The Results tab displaying discovered open ports along with their associated ser
 
 ---
 
-### Timestamp & Completion
+### 𝚃𝚒𝚖𝚎𝚜𝚝𝚊𝚖𝚙 & 𝙲𝚘𝚖𝚙𝚕𝚎𝚝𝚒𝚘𝚗
 
 ![timestamp](Screenshots/timestamp.png)
 
@@ -125,8 +115,6 @@ Scan completion summary showing the elapsed duration and a fully populated resul
 ═══════════════════════════════
 COMMANDS & CODE
 ═══════════════════════════════
-
-## Commands & Code
 
 **Install dependencies:**
 
@@ -158,10 +146,8 @@ if result == 0:
 CONCLUSION
 ═══════════════════════════════
 
-## Conclusion
-
-Port Scanner demonstrates the practical application of multithreaded network programming within a polished, browser-based interface. The project reinforces core concepts in socket programming, thread synchronization, and real-time UI rendering. It delivers a functional and extensible reconnaissance tool with a strong emphasis on usability and visual clarity.
+𝙋𝙤𝙧𝙩 𝙎𝙘𝙖𝙣𝙣𝙚𝙧 demonstrates the practical application of multithreaded network programming within a polished, browser-based interface. The project reinforces core concepts in socket programming, thread synchronization, and real-time UI rendering. It delivers a functional and extensible reconnaissance tool with a strong emphasis on usability and visual clarity.
 
 ---
 
-<p align="center">Developed as a personal cybersecurity tooling project</p>
+<p align="center"><i>𝘋𝘦𝘷𝘦𝘭𝘰𝘱𝘦𝘥 𝘢𝘴 𝘱𝘢𝘳𝘵 𝘰𝘧 𝘮𝘺 𝘤𝘺𝘣𝘦𝘳𝘴𝘦𝘤𝘶𝘳𝘪𝘵𝘺 𝘪𝘯𝘵𝘦𝘳𝘯𝘴𝘩𝘪𝘱 𝘸𝘪𝘵𝘩 𝗦𝘆𝗻𝘁𝗲𝗰𝘅𝗛𝘂b</i></p>
