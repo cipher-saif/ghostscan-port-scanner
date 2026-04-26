@@ -7,8 +7,8 @@
 ╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝       ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝
 ```
 
-<h1 align="center">PORT SCANNER</h1>
-<p align="center"><i>𝘈 𝘮𝘶𝘭𝘵𝘪𝘵𝘩𝘳𝘦𝘢𝘥𝘦𝘥 𝘯𝘦𝘵𝘸𝘰𝘳𝘬 𝘱𝘰𝘳𝘵 𝘴𝘤𝘢𝘯𝘯𝘦𝘳 𝘸𝘪𝘵𝘩 𝘢 𝘳𝘦𝘢𝘭-𝘵𝘪𝘮𝘦 𝘩𝘢𝘤𝘬𝘦𝘳-𝘢𝘦𝘴𝘵𝘩𝘦𝘵𝘪𝘤 𝘵𝘦𝘳𝘮𝘪𝘯𝘢𝘭 𝘜𝘐</i></p>
+<h1 align="center">GHOSTSCAN, A PORT SCANNER</h1>
+<p align="center"><i>A fast, multithreaded port scanner with live results, service detection, and banner grabbing — built with Python and Streamlit.</i></p>
 
 ---
 
